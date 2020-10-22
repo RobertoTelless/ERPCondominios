@@ -112,6 +112,43 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\ChechTimeAttribute.cs" />
+    <Compile Include="Attributes\CheckTimeAttributeMain.cs" />
+    <Compile Include="Attributes\CustomValidationCNPJAttribute .cs" />
+    <Compile Include="Attributes\CustomValidationCPFAttribute.cs" />
+    <Compile Include="Attributes\DataAnteriorAttribute.cs" />
+    <Compile Include="EntitiesServices\AgendaService.cs" />
+    <Compile Include="EntitiesServices\CondominioService.cs" />
+    <Compile Include="EntitiesServices\CargoService.cs" />
+    <Compile Include="EntitiesServices\ConfiguracaoService.cs" />
+    <Compile Include="EntitiesServices\LogService.cs" />
+    <Compile Include="EntitiesServices\NoticiaService.cs" />
+    <Compile Include="EntitiesServices\NotificacaoService.cs" />
+    <Compile Include="EntitiesServices\PerfilService.cs" />
+    <Compile Include="EntitiesServices\ServiceBase.cs" />
+    <Compile Include="EntitiesServices\TarefaService.cs" />
+    <Compile Include="EntitiesServices\TelefoneService.cs" />
+    <Compile Include="EntitiesServices\TemplateService.cs" />
+    <Compile Include="EntitiesServices\TipoPessoaService.cs" />
+    <Compile Include="EntitiesServices\TipoTagService.cs" />
+    <Compile Include="EntitiesServices\UnidadeService.cs" />
+    <Compile Include="EntitiesServices\UsuarioService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\IAgendaService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ICondominioService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ICargoService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\IConfiguracaoService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ILogService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\INoticiaService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\INotificacaoService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\IPerfilService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\IServiceBase.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ITarefaService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ITelefoneService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ITemplateService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ITipoPessoaService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\ITipoTagService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\IUnidadeService.cs" />
+    <Compile Include="Interfaces\EntitiesServices\IUsuarioService.cs" />
     <Compile Include="Interfaces\ExternalServices\IECT_Services.cs" />
     <Compile Include="Interfaces\Repositories\IAgendaAnexoRepository.cs" />
     <Compile Include="Interfaces\Repositories\IAgendaRepository.cs" />
@@ -571,11 +608,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Attributes\" />
-    <Folder Include="EntitiesServices\" />
-    <Folder Include="Interfaces\EntitiesServices\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
@@ -590,6 +623,12 @@
       <DependentUpon>ERPCondominio_Model.edmx</DependentUpon>
       <LastGenOutput>ERPCondominio_Model.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CrossCutting\CrossCutting.csproj">
+      <Project>{1bbd3ba0-c3aa-4256-90cc-c77d987148c2}</Project>
+      <Name>CrossCutting</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
